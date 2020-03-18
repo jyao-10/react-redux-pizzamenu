@@ -1,7 +1,7 @@
 import React , {Component}from 'react';
 import { connect } from 'react-redux';
-import Toppings from './Toppings';
 import { SetSauceValues } from '../actions';
+import Pizza from './pizza/Pizza';
 
 
 class Sauce extends Component {
@@ -40,7 +40,7 @@ class Sauce extends Component {
     render(){
         if (this.state.formSubmitted === true){
             return(
-                <Toppings />
+                <Pizza />
             )
           }
 

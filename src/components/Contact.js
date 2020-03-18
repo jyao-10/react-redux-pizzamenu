@@ -5,6 +5,7 @@ import SetCustomerValues from '../actions';
 
 import { Button } from '@material-ui/core';
 import { TextField } from '@material-ui/core';
+import Box from '@material-ui/core/Box';
 
 class Contact extends Component {
 
@@ -75,9 +76,10 @@ class Contact extends Component {
           <br />
           
           <Button variant="outlined" type="submit" value="Submit">Submit</Button>
-
+          
         </form>
         </div>
+
       );
     }
   }

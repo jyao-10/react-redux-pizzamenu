@@ -13,7 +13,7 @@ const initialState = {
 
 };
 
-const ToppingsList = [];
+let ToppingsList = [];
 
 function reducer(state = initialState, action) {
     switch (action.type) {
@@ -29,7 +29,8 @@ function reducer(state = initialState, action) {
             }
         case 'SET_TOPPINGVALUES':
             let toppings = action.payload;
-            
+            ToppingsList = [];
+
             for (let [key, value] of Object.entries(toppings)) {
                 if (value === true){
                     ToppingsList.push(key)
