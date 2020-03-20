@@ -3,9 +3,11 @@ import Sauce from './Sauce';
 import { connect } from 'react-redux';
 import SetCustomerValues from '../actions';
 
-import { Button } from '@material-ui/core';
-import { TextField } from '@material-ui/core';
-import Box from '@material-ui/core/Box';
+import { Form, Button, Grid, Container} from 'semantic-ui-react';
+import Menu from './menu/Menu';
+
+import 'semantic-ui-css/semantic.min.css';
+
 
 class Contact extends Component {
 
@@ -52,33 +54,61 @@ class Contact extends Component {
       }
 
       return(
+
         <div>
-        <form autoComplete="off" onSubmit = {()=> this.handleSubmit()}>
+        <Menu />
+        <Container>
+        <Grid>
+          <Grid.Row >
+            <Grid.Column>
+              <Form onSubmit = {()=> this.handleSubmit()}>
+                  <Form.Input
+                    fluid
+                    label='Name'
+                    placeholder='Name'
+                    value={this.state.values.name}
+                    type="text"
+                    name="name"
+                    onChange={this.handleInputChange}
+                    />
+                  <br/>
 
-          <TextField id="standard-basic" label="Name" value={this.state.values.name}
-          type ="text" name="name" onChange={this.handleInputChange}
-          />
-          <br />
+                  <Form.Input
+                    name='email'
+                    type='text'
+                    label='Email'
+                    value={this.state.values.email}
+                    placeholder="Email" 
+                    onChange={this.handleInputChange}
+                    />
+                <br/>
 
-          <TextField id="standard-basic" label="Email" value={this.state.values.email}
-          type ="text" name="email" onChange={this.handleInputChange}
-          />
-          <br />
+                <Form.Input
+                  name='address'
+                  type='text'
+                  label='Address'
+                  value={this.state.values.address}
+                  placeholder="Address" 
+                  onChange={this.handleInputChange}
+                  />
+                <br />
 
-          <TextField id="standard-basic" label="Address" value={this.state.values.address}
-          type ="text" name="address" onChange={this.handleInputChange}
-          />
-          <br />
+                <Form.Input
+                  name='phoneNo'
+                  type='text'
+                  label='Phone Number'
+                  value={this.state.values.phoneNo}
+                  placeholder="Phone Number" onChange={this.handleInputChange}
+                  />
+                <br />
+                <Button type='submit'>Submit</Button>
+              </Form>
+            </Grid.Column>
+          </Grid.Row>
+          </Grid>
+          </Container>
 
-          <TextField id="standard-basic" label="Phone Number" value={this.state.values.phoneNo}
-          type ="text" name="phoneNo" onChange={this.handleInputChange}
-          />
-          <br />
-          
-          <Button variant="outlined" type="submit" value="Submit">Submit</Button>
-          
-        </form>
-        </div>
+          </div>
 
       );
     }

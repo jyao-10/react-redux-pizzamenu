@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Menu from './menu/Menu';
 
 const mapStateToProps = state => {
     return { 
@@ -11,6 +12,7 @@ const mapStateToProps = state => {
 
 const Order = ({customerValues, sauceValues, toppingList}) => (
     <div>
+        <Menu />
             <h1> Contact Information: </h1>
             <h2>Name: {customerValues.name}</h2>
             <h2>Email: {customerValues.email}</h2>

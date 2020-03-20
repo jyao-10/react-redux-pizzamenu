@@ -2,6 +2,9 @@ import React , {Component}from 'react';
 import { connect } from 'react-redux';
 import { SetSauceValues } from '../actions';
 import Pizza from './pizza/Pizza';
+import Menu from './menu/Menu';
+
+import 'semantic-ui-css/semantic.min.css';
 
 
 class Sauce extends Component {
@@ -46,6 +49,7 @@ class Sauce extends Component {
 
         return (
             <div>
+              <Menu />
                 <h2>Choose your sauce level and crust types!</h2>
 
                 <form onSubmit = {()=> this.handleSubmit()}>
@@ -71,6 +75,7 @@ class Sauce extends Component {
                 <input type="submit" value="Submit" />
                 </form>
             </div>       
+          
         );   
     }
 }

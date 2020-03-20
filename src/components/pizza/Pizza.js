@@ -11,7 +11,7 @@ import Order from "../Order";
 import { SetToppingValues } from '../../actions';
 import { connect } from 'react-redux';
 
-
+import Menu from '../menu/Menu';
 
 class Pizza extends Component {
    constructor(props) {
@@ -68,7 +68,8 @@ class Pizza extends Component {
       const veggie = this.state.values.veggie && <Veggie />;
 
       return (
-            <div>
+         <div>
+         <Menu />
                <div className="container mt-5">
                   <div className="d-flex justify-content-center">
                      <div className="plate">

@@ -15,11 +15,11 @@ import Pizza from './pizza/Pizza'
 import Home from './Home';
 
 
-class Header extends Component {
+class Linker extends Component {
   
     render(){
       return(
-  
+
         <Router>
         <div>
           <nav>
@@ -27,20 +27,15 @@ class Header extends Component {
               <li>
                 <Link to="/">Home</Link>
               </li>
-  
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link to="/Contact">Contact</Link>
               </li>
-
-  
               <li>
-                <Link to="/sauce">Sauce</Link>
+                <Link to="/Sauce">Sauce</Link>
               </li>
-  
               <li>
-                <Link to="/toppings">Toppings</Link>
+                <Link to="/Toppings">Toppings</Link>
               </li>
-  
               <li>
                 <Link to="/Order">Final Order</Link>
               </li>
@@ -82,5 +77,5 @@ class Header extends Component {
   }
   
 
-  export default Header;
+  export default Linker;
   
