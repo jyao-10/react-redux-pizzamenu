@@ -11,9 +11,11 @@ import Box from '@material-ui/core/Box';
 const store = createStore(reducer);
 
 ReactDOM.render(
+    <div>
     <Provider store={store}>
         <App />
-    </Provider>, 
+    </Provider>
+    </div>, 
     document.getElementById('root')
 );
 serviceWorker.unregister();
