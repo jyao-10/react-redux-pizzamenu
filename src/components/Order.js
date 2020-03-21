@@ -2,6 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Menu from './menu/Menu';
 
+import ProgressBar from 'react-bootstrap/ProgressBar';
+
+const now = 100;
+
 const mapStateToProps = state => {
     return { 
         customerValues : state.customerValues,
@@ -12,7 +16,9 @@ const mapStateToProps = state => {
 
 const Order = ({customerValues, sauceValues, toppingList}) => (
     <div>
-        <Menu />
+        <Menu /><br />
+
+        <ProgressBar variant="success" animated now={now} label={`${now}% completed`}  />
             <h1> Contact Information: </h1>
             <h2>Name: {customerValues.name}</h2>
             <h2>Email: {customerValues.email}</h2>

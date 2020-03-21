@@ -6,8 +6,11 @@ import SetCustomerValues from '../actions';
 import { Form, Button, Grid, Container} from 'semantic-ui-react';
 import Menu from './menu/Menu';
 
+import ProgressBar from 'react-bootstrap/ProgressBar';
+
 import 'semantic-ui-css/semantic.min.css';
 
+const now = 25;
 
 class Contact extends Component {
 
@@ -56,7 +59,10 @@ class Contact extends Component {
       return(
 
         <div>
-        <Menu />
+        <Menu /><br />
+
+        <ProgressBar variant="success" animated now={now} label={`${now}% completed`} />
+        <br />
         <Container>
         <Grid>
           <Grid.Row >

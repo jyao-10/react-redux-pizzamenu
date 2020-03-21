@@ -12,6 +12,9 @@ import { SetToppingValues } from '../../actions';
 import { connect } from 'react-redux';
 
 import Menu from '../menu/Menu';
+import ProgressBar from 'react-bootstrap/ProgressBar';
+
+const now = 75; 
 
 class Pizza extends Component {
    constructor(props) {
@@ -69,7 +72,9 @@ class Pizza extends Component {
 
       return (
          <div>
-         <Menu />
+         <Menu /><br />
+         <ProgressBar variant="success" animated now={now} label={`${now}% completed`}  />
+
                <div className="container mt-5">
                   <div className="d-flex justify-content-center">
                      <div className="plate">

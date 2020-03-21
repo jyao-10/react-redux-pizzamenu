@@ -3,9 +3,11 @@ import { connect } from 'react-redux';
 import { SetSauceValues } from '../actions';
 import Pizza from './pizza/Pizza';
 import Menu from './menu/Menu';
+import ProgressBar from 'react-bootstrap/ProgressBar';
 
 import 'semantic-ui-css/semantic.min.css';
 
+const now = 50;
 
 class Sauce extends Component {
 
@@ -40,6 +42,7 @@ class Sauce extends Component {
           })
       }
 
+
     render(){
         if (this.state.formSubmitted === true){
             return(
@@ -49,7 +52,9 @@ class Sauce extends Component {
 
         return (
             <div>
-              <Menu />
+              <Menu /><br />
+
+              <ProgressBar variant="success" animated now={now} label={`${now}% completed`} />
                 <h2>Choose your sauce level and crust types!</h2>
 
                 <form onSubmit = {()=> this.handleSubmit()}>
