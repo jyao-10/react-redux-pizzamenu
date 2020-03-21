@@ -9,6 +9,13 @@ const initialState = {
         sauce: '',
         crust: ''
     },
+    toppingValues: {
+        tomato: false,
+        mushroom: false,
+        veggie: false,
+        corn: false
+     },
+
     toppingsList: {}
 
 };
@@ -39,6 +46,7 @@ function reducer(state = initialState, action) {
 
             return {
                 ...state,
+                toppingValues : toppings,
                 toppingsList: ToppingsList
             }
         default:

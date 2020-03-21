@@ -84,8 +84,11 @@ class Pizza extends Component {
                         {corn}
                         {veggie}
                      </div>
+                     
                   </div>
+                  <div className="d-flex justify-content-center">
                   <Button eventHandler={this.clickEventHandler} />
+                  </div>
                </div>
             </div>
       );

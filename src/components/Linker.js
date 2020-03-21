@@ -7,11 +7,11 @@ import {
 } from "react-router-dom";
 
 
-import Contact from './Contact'
-import Order from './Order'
-import Sauce from './Sauce'
-import Pizza from './pizza/Pizza'
-import Home from './Home'
+import Contact from './Contact';
+import Order from './Order';
+import Sauce from './Sauce';
+import Pizza from './pizza/Pizza';
+import Home from './Home';
 
 
 class Linker extends Component {

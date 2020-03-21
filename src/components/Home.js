@@ -1,9 +1,9 @@
-import React , {Component}from 'react'
-import { Button } from 'semantic-ui-react'
-import { Link } from 'react-router-dom'
-import { Header, Image} from 'semantic-ui-react'
-import Menu from './menu/Menu'
-import mainLogo from './images/logo.png'
+import React , {Component}from 'react';
+import { Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import { Header, Image} from 'semantic-ui-react';
+import Menu from './menu/Menu';
+import mainLogo from './images/logo.png';
 
 export default class Home extends Component {
 
